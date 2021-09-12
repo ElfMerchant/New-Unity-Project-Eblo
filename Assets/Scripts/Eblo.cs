@@ -1,6 +1,8 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using Fungus;
+
 
 public class Eblo : MonoBehaviour
 {
@@ -53,6 +55,11 @@ public class Eblo : MonoBehaviour
 
         if (!isGrounded) State = States.jump;
     }
+
+    //private void OnTriggerEnter2D(Collider2D collision)
+    //{
+    //    Flowchart.ExecuteBlock("Trigger");
+    //}
 
     // Update is called once per frame
     private void Update()
