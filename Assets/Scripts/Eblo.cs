@@ -4,7 +4,7 @@ using UnityEngine;
 using Fungus;
 
 
-public class Eblo : MonoBehaviour
+public class Eblo : Entity
 {
     [SerializeField] private float speed = 10f; // скорость передвижения
     [SerializeField] private int lives = 3; // количество жизней
@@ -14,7 +14,7 @@ public class Eblo : MonoBehaviour
     private Rigidbody2D rb;
     private Animator anim;
     private SpriteRenderer sprite;
-    
+    public static Eblo Instance { get; set; }
 
     private States State
     {
@@ -29,6 +29,7 @@ public class Eblo : MonoBehaviour
         rb = GetComponent<Rigidbody2D>();
         anim = GetComponent <Animator>();
         sprite = GetComponentInChildren<SpriteRenderer>();
+        Instance = this;
      
     }   
 
@@ -54,6 +55,12 @@ public class Eblo : MonoBehaviour
         isGrounded = collider.Length > 1;
 
         if (!isGrounded) State = States.jump;
+    }
+
+    public override void GetDamage()
+    {
+        lives -= 1;
+        Debug.Log("Eblo lives counter:" + lives);
     }
 
     //private void OnTriggerEnter2D(Collider2D collision)

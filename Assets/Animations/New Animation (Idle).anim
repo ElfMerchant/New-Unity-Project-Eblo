@@ -21,18 +21,18 @@ AnimationClip:
   - curve:
     - time: 0
       value: {fileID: 7146570984753549674, guid: 5d3a12fce3bdf0a4280e82d7c4243134, type: 3}
-    - time: 0.5
+    - time: 0.46666667
       value: {fileID: -7211625423188279565, guid: 5d3a12fce3bdf0a4280e82d7c4243134, type: 3}
-    - time: 0.6666667
+    - time: 0.6
       value: {fileID: -5106862008032299496, guid: 5d3a12fce3bdf0a4280e82d7c4243134, type: 3}
-    - time: 0.8333333
+    - time: 0.73333335
       value: {fileID: -7211625423188279565, guid: 5d3a12fce3bdf0a4280e82d7c4243134, type: 3}
-    - time: 1
+    - time: 0.8666667
       value: {fileID: 7146570984753549674, guid: 5d3a12fce3bdf0a4280e82d7c4243134, type: 3}
     - time: 3
       value: {fileID: 7146570984753549674, guid: 5d3a12fce3bdf0a4280e82d7c4243134, type: 3}
     attribute: m_Sprite
-    path: pngegg_7
+    path: Eblo_sprite
     classID: 212
     script: {fileID: 0}
   m_SampleRate: 60
@@ -43,7 +43,7 @@ AnimationClip:
   m_ClipBindingConstant:
     genericBindings:
     - serializedVersion: 2
-      path: 942622741
+      path: 4216629192
       attribute: 0
       script: {fileID: 0}
       typeID: 212

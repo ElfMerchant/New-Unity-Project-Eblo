@@ -22,7 +22,7 @@ AnimationClip:
     - time: 0
       value: {fileID: -8003142646107435891, guid: 5d3a12fce3bdf0a4280e82d7c4243134, type: 3}
     attribute: m_Sprite
-    path: pngegg_7
+    path: Eblo_sprite
     classID: 212
     script: {fileID: 0}
   m_SampleRate: 60
@@ -33,7 +33,7 @@ AnimationClip:
   m_ClipBindingConstant:
     genericBindings:
     - serializedVersion: 2
-      path: 942622741
+      path: 4216629192
       attribute: 0
       script: {fileID: 0}
       typeID: 212
