@@ -4,27 +4,41 @@ using UnityEngine;
 
 public class Mushroom : Entity
 {
-    private float speed = 3.5f;
-    private Vector3 dir;
-    private SpriteRenderer sprite;
+    public float speed;
+    public float distance;
+
+    private bool movingRight = true;
+
+    public Transform groundDetection;
+
+    private Animator anim;
 
 
-    private void Start()
-    {
-        dir = transform.right;
+    // Update is called once per frame
+    void Update(){
+
+        transform.Translate(Vector2.right * speed * Time.deltaTime);
+        RaycastHit2D groundInfo = Physics2D.Raycast(groundDetection.position, Vector2.down, distance);
+
+        
+        if (groundInfo.collider == false)
+        {
+            if (movingRight == true)
+            {
+                transform.eulerAngles = new Vector3(0, -180, 0);
+                movingRight = false;
+            }
+            else
+            {
+                {
+                    transform.eulerAngles = new Vector3(0, 0, 0);
+                    movingRight = true;
+                }
+            }
+        }
     }
-
-    private void Move()
-    {
-        Collider2D[] colliders = Physics2D.OverlapCircleAll(transform.position + transform.up * 0.1f + transform.right * dir.x * 0.7f, 0.1f);
-
-        if (colliders.Length > 0) dir *= -1f;
-
-        transform.position = Vector3.MoveTowards(transform.position, transform.position + dir, speed*Time.deltaTime);
-
-        sprite.flipX = dir.x < 0.0f;
-
-    }
+       
+        
 
     private void OnCollisionEnter2D(Collision2D collision)
     {
@@ -34,9 +48,4 @@ public class Mushroom : Entity
         }
     }
 
-    // Update is called once per frame
-    private void Update()
-    {
-        Move();
-    }   
 }
