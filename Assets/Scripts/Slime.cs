@@ -4,7 +4,13 @@ using UnityEngine;
 
 public class Slime : Entity
 { 
-    [SerializeField] private int lives = 3;
+    [SerializeField] 
+
+
+    private void Start()
+    {
+        lives = 3;
+    }
 
 
     private void OnCollisionEnter2D(Collision2D collision)

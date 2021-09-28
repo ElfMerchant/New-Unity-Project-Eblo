@@ -14,6 +14,10 @@ public class Mushroom : Entity
 
     private Animator anim;
 
+    private void Start()
+    {
+        lives = 5;
+    }
 
     // Update is called once per frame
     void Update(){
