@@ -150,7 +150,9 @@ public class Eblo : Entity
         Debug.Log("Eblo lives counter:" + lives);
         if (lives < 1) // ÀËßÐÌ! ÂÎÇÌÎÆÍÎ ÝÒÎ ÍÅ ÑÞÄÀ, ÍÎ ÝÒÎ ÐÀÁÎÒÀÅÒ
             Die(); // ÒÀÊÈÅ ÄÅËÀ
+        
     }
+
 
     //private void OnTriggerEnter2D(Collider2D collision)
     //{
