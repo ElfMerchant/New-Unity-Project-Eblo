@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 using Fungus;
 
 
@@ -8,8 +9,12 @@ public class Eblo : Entity
 {
     [SerializeField] private float speed = 10f; // скорость передвижения
     [SerializeField] private float jumpforce = 15f; // сила прыжка
-    [SerializeField] private int lives = 5; // количество жизней
+    [SerializeField] private int health = 5; // текущее здоровье
     public bool isGrounded = false; // тест на нахождение на земле, чтобы избежать возможности бесконечного прыжка ( !ЗАМЕНИТЬ НА ТЕСТ НА ВЕРТИКАЛЬНОЕ УСКОРЕНИЕ!)
+
+    [SerializeField] private Image[] hearts;
+    [SerializeField] private Sprite aliveHeart;
+    [SerializeField] private Sprite deadHeart;
 
     public bool isAttacking = false;
     public bool isRecharged = true;
@@ -35,6 +40,8 @@ public class Eblo : Entity
 
     private void Awake()
     {
+        lives = 5;
+        health = lives;
         Instance = this;
         rb = GetComponent<Rigidbody2D>();
         anim = GetComponent <Animator>();
@@ -118,6 +125,8 @@ public class Eblo : Entity
     {
         lives -= 1;
         Debug.Log("Eblo lives counter:" + lives);
+        if (lives < 1) // АЛЯРМ! ВОЗМОЖНО ЭТО НЕ СЮДА, НО ЭТО РАБОТАЕТ
+            Die(); // ТАКИЕ ДЕЛА
     }
 
     //private void OnTriggerEnter2D(Collider2D collision)
@@ -137,6 +146,22 @@ public class Eblo : Entity
                 Jump();
             if (Input.GetButtonDown("Fire1"))
                 Attack();
+
+        if (health > lives)
+            health = lives;
+
+        for (int i = 0; i < hearts.Length; i++)
+        {
+            if (i < health)
+                hearts[i].sprite = aliveHeart;
+            else
+                hearts[i].sprite = deadHeart; //deadHeart не отображается
+
+            if (i < lives)
+                hearts[i].enabled = true;
+            else
+                hearts[i].enabled = false;
+        }
    
     }
 
