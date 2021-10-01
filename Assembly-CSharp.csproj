@@ -55,10 +55,13 @@
   <ItemGroup>
     <Compile Include="Assets\Scripts\Slime.cs" />
     <Compile Include="Assets\Scripts\Entity.cs" />
+    <Compile Include="Assets\Scripts\FlyingMonster.cs" />
     <Compile Include="Assets\Scripts\Mushroom.cs" />
     <Compile Include="Assets\Scripts\Camera_Controller.cs" />
     <Compile Include="Assets\Scripts\Eblo.cs" />
-    <Compile Include="Assets\Scripts\FlyingMonster.cs" />
+    <Compile Include="Assets\Scripts\Parallax.cs" />
+    <Compile Include="Assets\Scripts\LosePlatform.cs" />
+    <Compile Include="Assets\Scripts\Pause.cs" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="UnityEngine">
