@@ -87,6 +87,7 @@ public class MonsterAttackScript : MonoBehaviour
         }
         if (cooling)
         {
+            Cooldown();
             anim.SetBool("Attack", false);
         }
     }
@@ -95,7 +96,7 @@ public class MonsterAttackScript : MonoBehaviour
     void Move()
     {
         anim.SetBool("canWalk", true);
-        if (!anim.GetCurrentAnimatorStateInfo(0).IsName("Skeal_attack"))
+        if (!anim.GetCurrentAnimatorStateInfo(0).IsName("mushroom_attack"))
         {
             Vector2 targetPosition = new Vector2(target.transform.position.x, transform.position.y);
             transform.position = Vector2.MoveTowards(transform.position, targetPosition, movespeed * Time.deltaTime);
@@ -111,6 +112,16 @@ public class MonsterAttackScript : MonoBehaviour
         anim.SetBool("canWalk", false);
         anim.SetBool("Attack", true);
 
+    }
+
+    void Cooldown()
+    {
+        timer -= Time.deltaTime;
+        if (timer <= 0 && cooling && attackMode)
+        {
+            cooling = false;
+            timer = inttimer;
+        }
     }
 
     void StopAttack()
@@ -131,5 +142,9 @@ public class MonsterAttackScript : MonoBehaviour
         {
             Debug.DrawRay(rayCast.position, Vector2.left * rayCastLength, Color.green);
         }
+    }
+    public void TriggerCooling()
+    {
+        cooling = true;
     }
 }

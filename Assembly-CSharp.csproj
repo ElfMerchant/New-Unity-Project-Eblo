@@ -62,9 +62,9 @@
     <Compile Include="Assets\Scripts\MushroomBoss.cs" />
     <Compile Include="Assets\Scripts\Camera_Controller.cs" />
     <Compile Include="Assets\Scripts\Parallax.cs" />
+    <Compile Include="Assets\Scripts\MonsterAttackScript.cs" />
     <Compile Include="Assets\Scripts\Eblo.cs" />
     <Compile Include="Assets\Scripts\Pause.cs" />
-    <Compile Include="Assets\Scripts\MonsterAttackScript.cs" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="UnityEngine">
