@@ -178,7 +178,7 @@ public class Eblo : Entity
     private void Update()
     {
 
-            if (isGrounded && !isAttacking && health > 0) State = States.idle; //!!!!!!!!!!!!!!!!!!!!! Где-то в этих строчках персонаж имеет анимацию бега после смерти!!!!!!!!!!!!!!
+            if (isGrounded && !isAttacking && health > 0) State = States.idle; 
 
             if (!isAttacking && Input.GetButton("Horizontal"))
                 Run();

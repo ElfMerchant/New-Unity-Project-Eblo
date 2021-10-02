@@ -5,6 +5,7 @@ using UnityEngine;
 public class Danger : Entity
 {
     Rigidbody2D rb;
+    public bool isGrounded;
 
 
     private void Start()
@@ -27,7 +28,20 @@ public class Danger : Entity
 
         {
             Eblo.Instance.Die(); // Либо .GetDamage;
+           
         }
+
+
+        if (!isGrounded)
+            Destroy(this.gameObject);
+
+    }
+
+    private void CheckGround()
+    {
+        Collider2D[] collider = Physics2D.OverlapCircleAll(transform.position, 1f);
+        isGrounded = collider.Length > 1;
+
     }
 
 }
