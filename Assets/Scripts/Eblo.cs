@@ -158,7 +158,7 @@ public class Eblo : Entity
     public override void Die()
     {
         State = States.death;
-        Invoke("SetLosePanel", 1.1f);
+        Invoke("SetLosePanel", 0.3f);// 0.3f отвечает за задержку перед смертью
         deathSound.Play();
     }
 
