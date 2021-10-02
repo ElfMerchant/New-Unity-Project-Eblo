@@ -15,6 +15,7 @@ public class Eblo : Entity
     [SerializeField] private Image[] hearts;
     [SerializeField] private Sprite aliveHeart;
     [SerializeField] private Sprite deadHeart;
+    [SerializeField] private GameObject losePanel;
 
     [SerializeField] private AudioSource jumpSound;
     [SerializeField] private AudioSource damageSound;
@@ -53,7 +54,8 @@ public class Eblo : Entity
         anim = GetComponent <Animator>();
         sprite = GetComponentInChildren<SpriteRenderer>();
         isRecharged = true;
-     
+        losePanel.SetActive(false); //Сам написал, чел в гайде просто не указал эту строчку
+
     }   
 
     private void Run()
@@ -69,7 +71,7 @@ public class Eblo : Entity
 
     private void Jump()
     {
-        rb.AddForce(transform.up * jumpforce, ForceMode2D.Impulse);
+        rb.velocity = Vector2.up * jumpforce;
         jumpSound.Play();
     }
 
@@ -138,7 +140,7 @@ public class Eblo : Entity
         Collider2D[] collider = Physics2D.OverlapCircleAll(transform.position, 1f);
         isGrounded = collider.Length > 1;
 
-        if (!isGrounded) State = States.jump;
+        if (!isGrounded && health > 0) State = States.jump;
     }
 
 
@@ -153,6 +155,19 @@ public class Eblo : Entity
         
     }
 
+    public override void Die()
+    {
+        State = States.death;
+        Invoke("SetLosePanel", 1.1f);
+        deathSound.Play();
+    }
+
+    private void SetLosePanel()//Нужно это дело подшаматить для корректной работы с вызовом Меню и рестартом уровня через смерть.
+    {
+        losePanel.SetActive(true);
+        Time.timeScale = 0;
+    }
+
 
     //private void OnTriggerEnter2D(Collider2D collision)
     //{
@@ -163,14 +178,18 @@ public class Eblo : Entity
     private void Update()
     {
 
-            if (isGrounded && !isAttacking) State = States.idle;
+            if (isGrounded && !isAttacking && health > 0) State = States.idle; //!!!!!!!!!!!!!!!!!!!!! Где-то в этих строчках персонаж имеет анимацию бега после смерти!!!!!!!!!!!!!!
 
             if (!isAttacking && Input.GetButton("Horizontal"))
                 Run();
-            if (!isAttacking && isGrounded && Input.GetButtonDown("Jump"))
+            if (!isAttacking && isGrounded && health > 0 && Input.GetButtonDown("Jump"))
                 Jump();
             if (Input.GetButtonDown("Fire1"))
                 Attack();
+            if (health < 1) State = States.death; // Написал сам, чтобы при смерти проигрывалась анимация смерти
+        
+
+
 
         if (health > lives)
             health = lives;
@@ -202,5 +221,6 @@ public enum States
     idle,
     run,
     jump,
-    attack
+    attack,
+    death
 }
