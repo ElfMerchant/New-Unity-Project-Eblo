@@ -16,6 +16,12 @@ public class Eblo : Entity
     [SerializeField] private Sprite aliveHeart;
     [SerializeField] private Sprite deadHeart;
 
+    [SerializeField] private AudioSource jumpSound;
+    [SerializeField] private AudioSource damageSound;
+    [SerializeField] private AudioSource missAttackSound;
+    [SerializeField] private AudioSource attackmobSound;
+    [SerializeField] private AudioSource deathSound;
+
     public bool isAttacking = false;
     public bool isRecharged = true;
 
@@ -64,6 +70,7 @@ public class Eblo : Entity
     private void Jump()
     {
         rb.AddForce(transform.up * jumpforce, ForceMode2D.Impulse);
+        jumpSound.Play();
     }
 
    
@@ -82,12 +89,19 @@ public class Eblo : Entity
     }
 
     private void OnAttack()
+
     {
         Collider2D[] colliders = Physics2D.OverlapCircleAll(attackPos.position, attackRange, enemy);
+
+        if (colliders.Length == 0)
+            missAttackSound.Play();
+        else
+            attackmobSound.Play();
 
         for (int i = 0; i < colliders.Length; i++)
         {
             colliders[i].GetComponent<Entity>().GetDamage();
+            StartCoroutine(EnemyOnAttack(colliders[i]));
         }
     }
 
@@ -111,6 +125,14 @@ public class Eblo : Entity
         isRecharged = true;
     }
 
+    private IEnumerator EnemyOnAttack(Collider2D enemy)
+    {
+        SpriteRenderer enemyColor = enemy.GetComponentInChildren<SpriteRenderer>();
+        enemyColor.color = new Color(1f, 0.4375f, 0.4375f);
+        yield return new WaitForSeconds(0.2f);
+        enemyColor.color = new Color(1, 1, 1);
+    }
+
     private void CheckGround()
     {
         Collider2D[] collider = Physics2D.OverlapCircleAll(transform.position, 1f);
@@ -124,10 +146,13 @@ public class Eblo : Entity
     public override void GetDamage()
     {
         lives -= 1;
+        damageSound.Play();
         Debug.Log("Eblo lives counter:" + lives);
         if (lives < 1) // ÀËßÐÌ! ÂÎÇÌÎÆÍÎ ÝÒÎ ÍÅ ÑÞÄÀ, ÍÎ ÝÒÎ ÐÀÁÎÒÀÅÒ
             Die(); // ÒÀÊÈÅ ÄÅËÀ
+        
     }
+
 
     //private void OnTriggerEnter2D(Collider2D collision)
     //{

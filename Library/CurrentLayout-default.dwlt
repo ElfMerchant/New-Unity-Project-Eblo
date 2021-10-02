@@ -19,9 +19,15 @@ MonoBehaviour:
     width: 1440
     height: 857
   m_ShowMode: 4
+<<<<<<< HEAD
   m_Title: Console
   m_RootView: {fileID: 6}
   m_MinSize: {x: 875, y: 392}
+=======
+  m_Title: Hierarchy
+  m_RootView: {fileID: 6}
+  m_MinSize: {x: 875, y: 300}
+>>>>>>> origin/Eblo.branch
   m_MaxSize: {x: 10000, y: 10000}
   m_Maximized: 1
 --- !u!114 &2
@@ -48,7 +54,11 @@ MonoBehaviour:
   m_MinSize: {x: 677, y: 342}
   m_MaxSize: {x: 12002, y: 8042}
   vertical: 0
+<<<<<<< HEAD
   controlID: 132
+=======
+  controlID: 17
+>>>>>>> origin/Eblo.branch
 --- !u!114 &3
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -226,7 +236,11 @@ MonoBehaviour:
   m_MinSize: {x: 402, y: 342}
   m_MaxSize: {x: 8002, y: 8042}
   vertical: 1
+<<<<<<< HEAD
   controlID: 19
+=======
+  controlID: 18
+>>>>>>> origin/Eblo.branch
 --- !u!114 &10
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -251,7 +265,11 @@ MonoBehaviour:
   m_MinSize: {x: 402, y: 221}
   m_MaxSize: {x: 8002, y: 4021}
   vertical: 0
+<<<<<<< HEAD
   controlID: 20
+=======
+  controlID: 19
+>>>>>>> origin/Eblo.branch
 --- !u!114 &11
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -269,10 +287,17 @@ MonoBehaviour:
     serializedVersion: 2
     x: 203
     y: 0
+<<<<<<< HEAD
     width: 884
     height: 536
   m_MinSize: {x: 200, y: 200}
   m_MaxSize: {x: 4000, y: 4000}
+=======
+    width: 1178
+    height: 676
+  m_MinSize: {x: 202, y: 221}
+  m_MaxSize: {x: 4002, y: 4021}
+>>>>>>> origin/Eblo.branch
   m_ActualView: {fileID: 17}
   m_Panes:
   - {fileID: 17}
@@ -310,6 +335,7 @@ MonoBehaviour:
     m_KeySerializationHelper:
     - {fileID: 7232628348912970558, guid: 41adefd4ed82aa54d9e721122baccb71, type: 2}
     - {fileID: -3536072592709740665, guid: 25d450b4d54cddd42981a525c403fdd2, type: 2}
+    - {fileID: 1830981293952164335, guid: bb17bd78808d0fd468d9d3ce6f5e7333, type: 2}
     m_ValueSerializationHelper:
     - e00: 1.2680105
       e01: 0
@@ -334,7 +360,23 @@ MonoBehaviour:
       e10: 0
       e11: 0.77789474
       e12: 0
-      e13: 214.87894
+      e13: 241.87894
+      e20: 0
+      e21: 0
+      e22: 1
+      e23: 0
+      e30: 0
+      e31: 0
+      e32: 0
+      e33: 1
+    - e00: 0.77789474
+      e01: 0
+      e02: 0
+      e03: -23.894745
+      e10: 0
+      e11: 0.77789474
+      e12: 0
+      e13: 241.87894
       e20: 0
       e21: 0
       e22: 1
@@ -344,9 +386,15 @@ MonoBehaviour:
       e32: 0
       e33: 1
   m_PreviewAnimator: {fileID: 0}
+<<<<<<< HEAD
   m_AnimatorController: {fileID: 9100000, guid: 25d450b4d54cddd42981a525c403fdd2, type: 2}
   m_BreadCrumbs:
   - m_Target: {fileID: -3536072592709740665, guid: 25d450b4d54cddd42981a525c403fdd2, type: 2}
+=======
+  m_AnimatorController: {fileID: 9100000, guid: bb17bd78808d0fd468d9d3ce6f5e7333, type: 2}
+  m_BreadCrumbs:
+  - m_Target: {fileID: 1830981293952164335, guid: bb17bd78808d0fd468d9d3ce6f5e7333, type: 2}
+>>>>>>> origin/Eblo.branch
     m_ScrollPosition: {x: 0, y: 0}
   stateMachineGraph: {fileID: 0}
   stateMachineGraphGUI: {fileID: 0}
@@ -422,22 +470,28 @@ MonoBehaviour:
     m_SkipHidden: 0
     m_SearchArea: 1
     m_Folders:
-    - Assets/Scripts
+    - Assets/UI
     m_Globs: []
     m_OriginalText: 
   m_ViewMode: 1
   m_StartGridSize: 64
   m_LastFolders:
-  - Assets/Scripts
+  - Assets/UI
   m_LastFoldersGridSize: -1
   m_LastProjectPath: C:\Unity\Projects\New-Unity-Project-Eblo
   m_LockTracker:
     m_IsLocked: 0
   m_FolderTreeState:
     scrollPos: {x: 0, y: 0}
+<<<<<<< HEAD
     m_SelectedIDs: ac4f0000
     m_LastClickedID: 20396
     m_ExpandedIDs: 00000000a24f0000a44f0000aa4f000000ca9a3b
+=======
+    m_SelectedIDs: fa510000
+    m_LastClickedID: 20986
+    m_ExpandedIDs: 00000000d4510000d6510000d851000000ca9a3b
+>>>>>>> origin/Eblo.branch
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -453,7 +507,7 @@ MonoBehaviour:
       m_IsRenaming: 0
       m_OriginalEventType: 11
       m_IsRenamingFilename: 1
-      m_ClientGUIView: {fileID: 0}
+      m_ClientGUIView: {fileID: 5}
     m_SearchString: 
     m_CreateAssetUtility:
       m_EndAction: {fileID: 0}
@@ -465,7 +519,11 @@ MonoBehaviour:
     scrollPos: {x: 0, y: 0}
     m_SelectedIDs: 
     m_LastClickedID: 0
+<<<<<<< HEAD
     m_ExpandedIDs: 00000000a24f0000a44f0000
+=======
+    m_ExpandedIDs: 00000000d4510000d6510000d8510000
+>>>>>>> origin/Eblo.branch
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -493,7 +551,7 @@ MonoBehaviour:
     m_SelectedInstanceIDs: 364b0000
     m_LastClickedInstanceID: 19254
     m_HadKeyboardFocusLastEvent: 1
-    m_ExpandedInstanceIDs: c623000052730000a6560000f84d0000064f0000dc6c0000b0470000
+    m_ExpandedInstanceIDs: c623000052730000a6560000f84d0000064f0000dc6c0000b047000084550000c6500000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -553,7 +611,11 @@ MonoBehaviour:
     m_ControlHash: -371814159
     m_PrefName: Preview_InspectorPreview
   m_LastInspectedObjectInstanceID: -1
+<<<<<<< HEAD
   m_LastVerticalScrollValue: 0
+=======
+  m_LastVerticalScrollValue: 180
+>>>>>>> origin/Eblo.branch
   m_GlobalObjectId: 
   m_LockTracker:
     m_IsLocked: 0
@@ -586,9 +648,15 @@ MonoBehaviour:
   m_SceneHierarchy:
     m_TreeViewState:
       scrollPos: {x: 0, y: 0}
+<<<<<<< HEAD
       m_SelectedIDs: 744b0000
       m_LastClickedID: 19316
       m_ExpandedIDs: 3efbffff364b0000744b0000
+=======
+      m_SelectedIDs: 
+      m_LastClickedID: 0
+      m_ExpandedIDs: 40fbffff1e4c00005a4c0000ba4c0000164d0000
+>>>>>>> origin/Eblo.branch
       m_RenameOverlay:
         m_UserAcceptedRename: 0
         m_Name: 
@@ -648,9 +716,15 @@ MonoBehaviour:
   m_PlayAudio: 0
   m_AudioPlay: 0
   m_Position:
+<<<<<<< HEAD
     m_Target: {x: 71.66424, y: 2.9336402, z: -713.9826}
     speed: 2
     m_Value: {x: 71.66424, y: 2.9336402, z: -713.9826}
+=======
+    m_Target: {x: -0.11638278, y: -4.1749544, z: -1089.8342}
+    speed: 2
+    m_Value: {x: -0.39012608, y: -4.0281425, z: -1089.7375}
+>>>>>>> origin/Eblo.branch
   m_RenderMode: 0
   m_CameraMode:
     drawMode: 0
@@ -701,9 +775,15 @@ MonoBehaviour:
     speed: 2
     m_Value: {x: 0, y: 0, z: 0, w: 1}
   m_Size:
+<<<<<<< HEAD
     m_Target: 9.077645
     speed: 2
     m_Value: 9.077645
+=======
+    m_Target: 22.444557
+    speed: 2
+    m_Value: 21.478045
+>>>>>>> origin/Eblo.branch
   m_Ortho:
     m_Target: 1
     speed: 2
@@ -759,7 +839,11 @@ MonoBehaviour:
   m_ShowGizmos: 0
   m_TargetDisplay: 0
   m_ClearColor: {r: 0, g: 0, b: 0, a: 0}
+<<<<<<< HEAD
   m_TargetSize: {x: 882, y: 494}
+=======
+  m_TargetSize: {x: 1127, y: 634}
+>>>>>>> origin/Eblo.branch
   m_TextureFilterMode: 0
   m_TextureHideFlags: 61
   m_RenderIMGUI: 1
@@ -768,16 +852,23 @@ MonoBehaviour:
   m_VSyncEnabled: 0
   m_Gizmos: 0
   m_Stats: 0
-  m_SelectedSizes: 00000000000000000000000000000000000000000000000000000000000000000000000000000000
+  m_SelectedSizes: 01000000000000000000000000000000000000000000000000000000000000000000000000000000
   m_ZoomArea:
     m_HRangeLocked: 0
     m_VRangeLocked: 0
     hZoomLockedByDefault: 0
     vZoomLockedByDefault: 0
+<<<<<<< HEAD
     m_HBaseRangeMin: -441
     m_HBaseRangeMax: 441
     m_VBaseRangeMin: -247
     m_VBaseRangeMax: 247
+=======
+    m_HBaseRangeMin: -563.5
+    m_HBaseRangeMax: 563.5
+    m_VBaseRangeMin: -317
+    m_VBaseRangeMax: 317
+>>>>>>> origin/Eblo.branch
     m_HAllowExceedBaseRangeMin: 1
     m_HAllowExceedBaseRangeMax: 1
     m_VAllowExceedBaseRangeMin: 1
