@@ -117,7 +117,7 @@ public class Eblo : Entity
 
     private IEnumerator AttackAnimation()
     {
-        yield return new WaitForSeconds(0.4f);
+        yield return new WaitForSeconds(1f);
         isAttacking = false;
     }
 

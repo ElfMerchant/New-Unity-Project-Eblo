@@ -20,7 +20,7 @@ AnimationClip:
   m_PPtrCurves:
   - curve:
     - time: 0
-      value: {fileID: -8003142646107435891, guid: 5d3a12fce3bdf0a4280e82d7c4243134, type: 3}
+      value: {fileID: -2195902854559227846, guid: 181078b208c021d4680e9cb15a737e08, type: 3}
     attribute: m_Sprite
     path: Eblo_sprite
     classID: 212
@@ -40,7 +40,7 @@ AnimationClip:
       customType: 23
       isPPtrCurve: 1
     pptrCurveMapping:
-    - {fileID: -8003142646107435891, guid: 5d3a12fce3bdf0a4280e82d7c4243134, type: 3}
+    - {fileID: -2195902854559227846, guid: 181078b208c021d4680e9cb15a737e08, type: 3}
   m_AnimationClipSettings:
     serializedVersion: 2
     m_AdditiveReferencePoseClip: {fileID: 0}

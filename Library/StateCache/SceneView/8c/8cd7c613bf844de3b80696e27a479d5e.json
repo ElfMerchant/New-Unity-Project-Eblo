@@ -1,9 +1,1 @@
-<<<<<<< Updated upstream
-﻿{"cameraMode":{"drawMode":0,"name":"Shaded","section":"Shading Mode"},"sceneLighting":true,"audioPlay":false,"sceneViewState":{"m_AlwaysRefresh":false,"showFog":true,"showSkybox":true,"showFlares":true,"showImageEffects":true,"showParticleSystems":true,"showVisualEffectGraphs":true,"m_FxEnabled":true},"in2DMode":true,"pivot":{"x":21.55055809020996,"y":1.9562063217163087,"z":-81.2563705444336},"rotation":{"x":0.0,"y":0.0,"z":0.0,"w":1.0},"size":50.210933685302737,"orthographic":true}
-=======
-<<<<<<< Updated upstream
-﻿{"cameraMode":{"drawMode":0,"name":"Shaded","section":"Shading Mode"},"sceneLighting":true,"audioPlay":false,"sceneViewState":{"m_AlwaysRefresh":false,"showFog":true,"showSkybox":true,"showFlares":true,"showImageEffects":true,"showParticleSystems":true,"showVisualEffectGraphs":true,"m_FxEnabled":true},"in2DMode":true,"pivot":{"x":4.56008243560791,"y":-3.8863139152526857,"z":-3.2385711669921877},"rotation":{"x":0.0,"y":0.0,"z":0.0,"w":1.0},"size":17.44679069519043,"orthographic":true}
-=======
-﻿{"cameraMode":{"drawMode":0,"name":"Shaded","section":"Shading Mode"},"sceneLighting":true,"audioPlay":false,"sceneViewState":{"m_AlwaysRefresh":false,"showFog":true,"showSkybox":true,"showFlares":true,"showImageEffects":true,"showParticleSystems":true,"showVisualEffectGraphs":true,"m_FxEnabled":true},"in2DMode":true,"pivot":{"x":74.94860076904297,"y":14.403709411621094,"z":-11.734623908996582},"rotation":{"x":0.0,"y":0.0,"z":0.0,"w":1.0},"size":32.292694091796878,"orthographic":true}
->>>>>>> Stashed changes
->>>>>>> Stashed changes
+﻿{"cameraMode":{"drawMode":0,"name":"Shaded","section":"Shading Mode"},"sceneLighting":true,"audioPlay":false,"sceneViewState":{"m_AlwaysRefresh":false,"showFog":true,"showSkybox":true,"showFlares":true,"showImageEffects":true,"showParticleSystems":true,"showVisualEffectGraphs":true,"m_FxEnabled":true},"in2DMode":true,"pivot":{"x":60.12051010131836,"y":-37.50381851196289,"z":-1827.8345947265625},"rotation":{"x":0.0,"y":0.0,"z":0.0,"w":1.0},"size":114.59020233154297,"orthographic":true}
