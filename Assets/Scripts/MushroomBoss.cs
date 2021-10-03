@@ -1,24 +1,27 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-//using System;
+using Fungus;
+using System;
 
 public class MushroomBoss : Entity
 {
+    [SerializeField] private float speedBoss;
+    [SerializeField] private float distanceBoss;
 
-    public float speedBoss;
-    public float distanceBoss;
+    [SerializeField] private bool isAttackingBoss = false;
+    [SerializeField] private bool isRechargedBoss = true;
+    [SerializeField] readonly private Animator anim;
 
     private Rigidbody2D rbBoss;
     private bool movingRight = true;
     private bool wallInfo;
     private bool inRange;
-    private bool isAttackingBoss = false;
-    private bool isRechargedBoss = true;
+    private bool inBattle;
 
     public Transform groundDetection;
 
-    private Animator anim;
+//    public Fungus.Flowchart flowchart;
 
     RaycastHit2D ebloInfo;
 
@@ -28,27 +31,29 @@ public class MushroomBoss : Entity
         inRange = false;
         isAttackingBoss = false;
         isRechargedBoss = true;
-//        Instance = this;
+        Instance = this;
     }
 
-    //public static MushroomBoss Instance { get; set; }
-    //private StatesBoss State
-    //{
-    //    get { return (StatesBoss)anim.GetInteger("State"); }
-    //    set { anim.SetInteger("State", (int)value); }
-    //}
+    public StatesBoss State { get; private set; }
+    public static MushroomBoss Instance { get; private set; }
+
+    private StatesBoss GetState()
+    { return (StatesBoss)anim.GetInteger("State"); }
+    private void SetState(StatesBoss value)
+    { anim.SetInteger("State", (int)value); }
 
     void Update()
     {
+//        Debug.Log(State);
         if (movingRight)
-            ebloInfo = Physics2D.Raycast(groundDetection.position, Vector2.right, distanceBoss*2, LayerMask.GetMask("Player"));
+            ebloInfo = Physics2D.Raycast(groundDetection.position, Vector2.right, distanceBoss*1.1f, LayerMask.GetMask("Player"));
         else
-            ebloInfo = Physics2D.Raycast(groundDetection.position, Vector2.left, distanceBoss*2, LayerMask.GetMask("Player"));
+            ebloInfo = Physics2D.Raycast(groundDetection.position, Vector2.left, distanceBoss*1.1f, LayerMask.GetMask("Player"));
 //        Debug.Log(ebloInfo);
 
         if (ebloInfo)
         {
- //           State = StatesBoss.mushroom_attack;
+            State = StatesBoss.mushroom_attack;
             Attack();
         }
 
@@ -69,13 +74,14 @@ public class MushroomBoss : Entity
 
     void MoveBoss()
     {
-        Debug.Log("Boss is approaching!");
+        //        Debug.Log("Boss is approaching!");
+        State = StatesBoss.mushroom_idle;
         isAttackingBoss = false;
         isRechargedBoss = true;
 
         transform.Translate(Vector2.right * speedBoss * Time.deltaTime);
         RaycastHit2D groundInfo = Physics2D.Raycast(groundDetection.position, Vector2.down, distanceBoss);
-//        Debug.Log(groundInfo.collider);
+        Debug.Log(groundInfo.collider);
 
         if (groundInfo.collider == false)
         {
@@ -97,7 +103,6 @@ public class MushroomBoss : Entity
             groundInfo = Physics2D.Raycast(groundDetection.position, Vector2.right, distanceBoss);
         else
             groundInfo = Physics2D.Raycast(groundDetection.position, Vector2.left, distanceBoss);
-
 
 //        Debug.Log(groundInfo.collider);
 
@@ -132,6 +137,7 @@ public class MushroomBoss : Entity
             StartCoroutine(AttackCoolDown());
         }
     }
+
     private IEnumerator AttackAnimation()
     {
         yield return new WaitForSeconds(0.8f);
