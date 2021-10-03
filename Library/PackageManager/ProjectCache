@@ -5,7 +5,7 @@ m_ProjectFiles:
     m_ContentTrackingEnabled: 1
     m_ModificationDate:
       serializedVersion: 2
-      ticks: 637688764373151323
+      ticks: 637688841607038403
     m_Hash: 3960006556
   m_LockFileStatus:
     m_FilePath: C:/NewProject/New-Unity-Project-Eblo/Packages/packages-lock.json
@@ -13,7 +13,7 @@ m_ProjectFiles:
     m_ContentTrackingEnabled: 1
     m_ModificationDate:
       serializedVersion: 2
-      ticks: 637688764373151323
+      ticks: 637688841607048397
     m_Hash: 1234578753
 m_EmbeddedPackageManifests:
   m_ManifestsStatus: {}
