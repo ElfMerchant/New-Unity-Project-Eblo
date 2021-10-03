@@ -15,11 +15,11 @@ C:/Unity/Projects/New-Unity-Project-Eblo
 -logFile
 Logs/AssetImportWorker0.log
 -srvPort
-49998
+50373
 Successfully changed project path to: C:/Unity/Projects/New-Unity-Project-Eblo
 C:/Unity/Projects/New-Unity-Project-Eblo
 Using Asset Import Pipeline V2.
-Refreshing native plugins compatible for Editor in 268.03 ms, found 3 plugins.
+Refreshing native plugins compatible for Editor in 304.28 ms, found 3 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Initialize engine version: 2020.3.8f1 (507919d4fff5)
 [Subsystems] Discovering subsystems at path C:/Unity/Editor/Data/Resources/UnitySubsystems
@@ -35,18 +35,18 @@ Initialize mono
 Mono path[0] = 'C:/Unity/Editor/Data/Managed'
 Mono path[1] = 'C:/Unity/Editor/Data/MonoBleedingEdge/lib/mono/unityjit'
 Mono config path = 'C:/Unity/Editor/Data/MonoBleedingEdge/etc'
-Using monoOptions --debugger-agent=transport=dt_socket,embedding=1,server=y,suspend=n,address=127.0.0.1:56056
+Using monoOptions --debugger-agent=transport=dt_socket,embedding=1,server=y,suspend=n,address=127.0.0.1:56400
 Begin MonoManager ReloadAssembly
 Registering precompiled unity dll's ...
 Register platform support module: C:/Unity/Editor/Data/PlaybackEngines/WebGLSupport/UnityEditor.WebGL.Extensions.dll
 Register platform support module: C:/Unity/Editor/Data/PlaybackEngines/WindowsStandaloneSupport/UnityEditor.WindowsStandalone.Extensions.dll
-Registered in 0.035098 seconds.
+Registered in 0.007037 seconds.
 Native extension for WindowsStandalone target not found
 Native extension for WebGL target not found
-Refreshing native plugins compatible for Editor in 566.05 ms, found 3 plugins.
+Refreshing native plugins compatible for Editor in 281.39 ms, found 3 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Mono: successfully reloaded assembly
-- Completed reload, in 20.173 seconds
+- Completed reload, in  7.573 seconds
 Platform modules already initialized, skipping
 Registering precompiled user dll's ...
-Registered in 0.023575 seconds.
+Registered in 0.022736 seconds.

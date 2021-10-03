@@ -70,6 +70,7 @@
     <Compile Include="Assets\Scripts\Loader.cs" />
     <Compile Include="Assets\Scripts\Pause.cs" />
     <Compile Include="Assets\Scripts\Triggers\Level1_Trigger.cs" />
+    <Compile Include="Assets\Scripts\LightController.cs" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="UnityEngine">
