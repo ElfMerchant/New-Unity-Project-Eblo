@@ -65,6 +65,7 @@
     <Compile Include="Assets\Scripts\MonsterAttackScript.cs" />
     <Compile Include="Assets\Scripts\Eblo.cs" />
     <Compile Include="Assets\Scripts\Pause.cs" />
+    <Compile Include="Assets\Scripts\Loader.cs" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="UnityEngine">
@@ -290,7 +291,7 @@
       <HintPath>C:\Program Files\2020.3.18f1\Editor\Data\Managed\UnityEngine\UnityEditor.UnityConnectModule.dll</HintPath>
     </Reference>
     <Reference Include="Pathfinding.Ionic.Zip.Reduced">
-      <HintPath>Assets\AstarPathfindingProject\Plugins\DotNetZip\Pathfinding.Ionic.Zip.Reduced.dll</HintPath>
+      <HintPath>Assets\Plugins\AstarPathfindingProject\Plugins\DotNetZip\Pathfinding.Ionic.Zip.Reduced.dll</HintPath>
     </Reference>
     <Reference Include="netstandard">
       <HintPath>C:\Program Files\2020.3.18f1\Editor\Data\NetStandard\ref\2.0.0\netstandard.dll</HintPath>
@@ -759,17 +760,37 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="Fungus.csproj">
-      <Project>{70ACB42F-DBB5-BD43-3E8A-D3A11003814A}</Project>
-      <Name>Fungus</Name>
+    <ProjectReference Include="Fungus.FungusLuaEditor.csproj">
+      <Project>{6ACEB930-9AD0-A873-8C6A-E54394B15CC2}</Project>
+      <Name>Fungus.FungusLuaEditor</Name>
+    </ProjectReference>
+    <ProjectReference Include="AstarPathfindingProject.csproj">
+      <Project>{9C0C6F0D-5FFA-B6AA-9887-225FE8F19A6D}</Project>
+      <Name>AstarPathfindingProject</Name>
     </ProjectReference>
     <ProjectReference Include="FungusEditor.csproj">
       <Project>{C3CF4952-EB7B-C124-4FA7-9F0DC0B2C56C}</Project>
       <Name>FungusEditor</Name>
     </ProjectReference>
+    <ProjectReference Include="Fungus.LineEndingsEditor.csproj">
+      <Project>{5D885D22-7781-9A3D-B9E8-E21E738ED8B2}</Project>
+      <Name>Fungus.LineEndingsEditor</Name>
+    </ProjectReference>
     <ProjectReference Include="PackageToolsEditor.csproj">
       <Project>{B2500985-3B7C-B482-D74F-64D4DF023AA0}</Project>
       <Name>PackageToolsEditor</Name>
+    </ProjectReference>
+    <ProjectReference Include="FungusExamples.csproj">
+      <Project>{353F4EAF-B639-7501-C46C-6EECD5CBF87F}</Project>
+      <Name>FungusExamples</Name>
+    </ProjectReference>
+    <ProjectReference Include="Fungus.csproj">
+      <Project>{70ACB42F-DBB5-BD43-3E8A-D3A11003814A}</Project>
+      <Name>Fungus</Name>
+    </ProjectReference>
+    <ProjectReference Include="AstarPathfindingProjectEditor.csproj">
+      <Project>{1459AE36-850F-E8E7-223E-668F3D60AB41}</Project>
+      <Name>AstarPathfindingProjectEditor</Name>
     </ProjectReference>
     <ProjectReference Include="Fungus.UsfxrEditor.csproj">
       <Project>{B0296EA7-9789-C90C-CCA2-0784BC9C81B3}</Project>
@@ -778,26 +799,6 @@
     <ProjectReference Include="Fungus.FungusLuaJSONCheckerEditor.csproj">
       <Project>{BF886B76-71BE-EB17-7107-A9924225FE8B}</Project>
       <Name>Fungus.FungusLuaJSONCheckerEditor</Name>
-    </ProjectReference>
-    <ProjectReference Include="FungusExamples.csproj">
-      <Project>{353F4EAF-B639-7501-C46C-6EECD5CBF87F}</Project>
-      <Name>FungusExamples</Name>
-    </ProjectReference>
-    <ProjectReference Include="Fungus.LineEndingsEditor.csproj">
-      <Project>{5D885D22-7781-9A3D-B9E8-E21E738ED8B2}</Project>
-      <Name>Fungus.LineEndingsEditor</Name>
-    </ProjectReference>
-    <ProjectReference Include="AstarPathfindingProject.csproj">
-      <Project>{9C0C6F0D-5FFA-B6AA-9887-225FE8F19A6D}</Project>
-      <Name>AstarPathfindingProject</Name>
-    </ProjectReference>
-    <ProjectReference Include="AstarPathfindingProjectEditor.csproj">
-      <Project>{1459AE36-850F-E8E7-223E-668F3D60AB41}</Project>
-      <Name>AstarPathfindingProjectEditor</Name>
-    </ProjectReference>
-    <ProjectReference Include="Fungus.FungusLuaEditor.csproj">
-      <Project>{6ACEB930-9AD0-A873-8C6A-E54394B15CC2}</Project>
-      <Name>Fungus.FungusLuaEditor</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

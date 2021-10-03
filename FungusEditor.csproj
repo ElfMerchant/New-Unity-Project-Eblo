@@ -1,7 +1,7 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <PropertyGroup>
-    <LangVersion>8.0</LangVersion>
+    <LangVersion>latest</LangVersion>
   </PropertyGroup>
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
@@ -53,87 +53,84 @@
     <UnityVersion>2020.3.18f1</UnityVersion>
   </PropertyGroup>
   <ItemGroup>
-    <Analyzer Include="C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\Common7\IDE\Extensions\Microsoft\Visual Studio Tools for Unity\Analyzers\Microsoft.Unity.Analyzers.dll" />
+    <Compile Include="Assets\Plugins\Fungus\Scripts\Editor\GenerateVariableWindow.cs" />
+    <Compile Include="Assets\Plugins\Fungus\Scripts\Editor\VariableTypes\CollectionVariableDrawer.cs" />
+    <Compile Include="Assets\Plugins\Fungus\Scripts\Editor\VariableTypes\AnimatorVariableDrawer.cs" />
+    <Compile Include="Assets\Plugins\Fungus\Scripts\Editor\CommandListAdaptor.cs" />
+    <Compile Include="Assets\Plugins\Fungus\Scripts\Editor\EnumFlagDrawer.cs" />
+    <Compile Include="Assets\Plugins\Fungus\Scripts\Editor\VariableTypes\SpriteVariableDrawer.cs" />
+    <Compile Include="Assets\Plugins\Fungus\Scripts\Editor\SaveMenuEditor.cs" />
+    <Compile Include="Assets\Plugins\Fungus\Scripts\Editor\FlowchartEditor.cs" />
+    <Compile Include="Assets\Plugins\Fungus\Scripts\Editor\HierarchyIcons.cs" />
+    <Compile Include="Assets\Plugins\Fungus\Scripts\Editor\NarrativeMenuItems.cs" />
+    <Compile Include="Assets\Plugins\Fungus\Scripts\Editor\SaveMenuItems.cs" />
+    <Compile Include="Assets\Plugins\Fungus\Scripts\Editor\CharacterEditor.cs" />
+    <Compile Include="Assets\Plugins\Fungus\Scripts\Editor\EditorZoomArea.cs" />
+    <Compile Include="Assets\Plugins\Fungus\Scripts\Editor\VariableTypes\Vector4VariableDrawer.cs" />
+    <Compile Include="Assets\Plugins\Fungus\Scripts\Editor\VariableTypes\GameObjectVariableDrawer.cs" />
+    <Compile Include="Assets\Plugins\Fungus\Scripts\Editor\CommandEditor.cs" />
+    <Compile Include="Assets\Plugins\Fungus\Scripts\Editor\VariableTypes\AudioSourceVariableDrawer.cs" />
+    <Compile Include="Assets\Plugins\Fungus\Scripts\Editor\VariableTypes\Matrix4x4VariableDrawer.cs" />
+    <Compile Include="Assets\Plugins\Fungus\Scripts\Editor\ExportReferenceDocs.cs" />
+    <Compile Include="Assets\Plugins\Fungus\Scripts\Editor\LabelEditor.cs" />
+    <Compile Include="Assets\Plugins\Fungus\Scripts\Editor\PopupContent\EventSelectorPopupWindowContent.cs" />
+    <Compile Include="Assets\Plugins\Fungus\Scripts\Editor\VariableTypes\QuaternionVariableDrawer.cs" />
+    <Compile Include="Assets\Plugins\Fungus\Scripts\Editor\SerializedPropertyExtensions.cs" />
+    <Compile Include="Assets\Plugins\Fungus\Scripts\Editor\LuaScriptedImporter.cs" />
+    <Compile Include="Assets\Plugins\Fungus\Scripts\Editor\VariableTypes\ColliderVariableDrawer.cs" />
+    <Compile Include="Assets\Plugins\Fungus\Scripts\Editor\VariableConditionEditor.cs" />
+    <Compile Include="Assets\Plugins\Fungus\Scripts\Editor\EditorExtensions.cs" />
+    <Compile Include="Assets\Plugins\Fungus\Scripts\Editor\VariableTypes\Vector3VariableDrawer.cs" />
+    <Compile Include="Assets\Plugins\Fungus\Scripts\Editor\StageEditor.cs" />
+    <Compile Include="Assets\Plugins\Fungus\Scripts\Editor\CustomGUI.cs" />
+    <Compile Include="Assets\Plugins\Fungus\Scripts\Editor\FungusEditorResourcesGenerated.cs" />
+    <Compile Include="Assets\Plugins\Fungus\Scripts\Editor\CustomVariableDrawerLookup.cs" />
+    <Compile Include="Assets\Plugins\Fungus\Scripts\Editor\BlockReferenceDrawer.cs" />
+    <Compile Include="Assets\Plugins\Fungus\Scripts\Editor\AnyVariableAndDataPairDrawer.cs" />
+    <Compile Include="Assets\Plugins\Fungus\Scripts\Editor\BlockEditor.cs" />
+    <Compile Include="Assets\Plugins\Fungus\Scripts\Editor\VariableTypes\TransformVariableDrawer.cs" />
+    <Compile Include="Assets\Plugins\Fungus\Scripts\Editor\FungusEditorResources.cs" />
+    <Compile Include="Assets\Plugins\Fungus\Scripts\Editor\WriterAudioEditor.cs" />
+    <Compile Include="Assets\Plugins\Fungus\Scripts\Editor\CallEditor.cs" />
+    <Compile Include="Assets\Plugins\Fungus\Scripts\Editor\FlowchartMenuItems.cs" />
+    <Compile Include="Assets\Plugins\Fungus\Scripts\Editor\VariableTypes\ColorVariableDrawer.cs" />
+    <Compile Include="Assets\Plugins\Fungus\Scripts\Editor\EventWindow.cs" />
+    <Compile Include="Assets\Plugins\Fungus\Scripts\Editor\VariableTypes\Vector2VariableDrawer.cs" />
+    <Compile Include="Assets\Plugins\Fungus\Scripts\Editor\VariableTypes\MaterialVariableDrawer.cs" />
+    <Compile Include="Assets\Plugins\Fungus\Scripts\Editor\VariableTypes\RigidbodyVariableDrawer.cs" />
+    <Compile Include="Assets\Plugins\Fungus\Scripts\Editor\VariableTypes\TextureVariableDrawer.cs" />
+    <Compile Include="Assets\Plugins\Fungus\Scripts\Editor\MenuTimerEditor.cs" />
+    <Compile Include="Assets\Plugins\Fungus\Scripts\Editor\LocalizationEditor.cs" />
+    <Compile Include="Assets\Plugins\Fungus\Scripts\Editor\DialogInputEditor.cs" />
+    <Compile Include="Assets\Plugins\Fungus\Scripts\Editor\ControlAudioEditor.cs" />
+    <Compile Include="Assets\Plugins\Fungus\Scripts\Editor\PortraitEditor.cs" />
+    <Compile Include="Assets\Plugins\Fungus\Scripts\Editor\FungusEditorPreferences.cs" />
+    <Compile Include="Assets\Plugins\Fungus\Scripts\Editor\InvokeMethodEditor.cs" />
+    <Compile Include="Assets\Plugins\Fungus\Scripts\Editor\WriteEditor.cs" />
+    <Compile Include="Assets\Plugins\Fungus\Scripts\Editor\MenuEditor.cs" />
+    <Compile Include="Assets\Plugins\Fungus\Scripts\Editor\SpriteMenuItems.cs" />
+    <Compile Include="Assets\Plugins\Fungus\Scripts\Editor\VariableListAdaptor.cs" />
+    <Compile Include="Assets\Plugins\Fungus\Scripts\Editor\VariableTypes\Collider2DVariableDrawer.cs" />
+    <Compile Include="Assets\Plugins\Fungus\Scripts\Editor\GenerateVariableHelper.cs" />
+    <Compile Include="Assets\Plugins\Fungus\Scripts\Editor\InvokeEventEditor.cs" />
+    <Compile Include="Assets\Plugins\Fungus\Scripts\Editor\VariableTypes\Rigidbody2DVariableDrawer.cs" />
+    <Compile Include="Assets\Plugins\Fungus\Scripts\Editor\EventHandlerEditor.cs" />
+    <Compile Include="Assets\Plugins\Fungus\Scripts\Editor\VariableReferenceDrawer.cs" />
+    <Compile Include="Assets\Plugins\Fungus\Scripts\Editor\PopupContent\CommandSelectorPopupWindowContent.cs" />
+    <Compile Include="Assets\Plugins\Fungus\Scripts\Editor\FlowchartWindow.cs" />
+    <Compile Include="Assets\Plugins\Fungus\Scripts\Editor\SolutionFileFixer.cs" />
+    <Compile Include="Assets\Plugins\Fungus\Scripts\Editor\CameraMenuItems.cs" />
+    <Compile Include="Assets\Plugins\Fungus\Scripts\Editor\SayEditor.cs" />
+    <Compile Include="Assets\Plugins\Fungus\Scripts\Editor\VariableEditor.cs" />
+    <Compile Include="Assets\Plugins\Fungus\Scripts\Editor\PopupContent\VariableSelectPopupWindowContent.cs" />
+    <Compile Include="Assets\Plugins\Fungus\Scripts\Editor\ViewEditor.cs" />
+    <Compile Include="Assets\Plugins\Fungus\Scripts\Editor\BlockInspector.cs" />
+    <Compile Include="Assets\Plugins\Fungus\Scripts\Editor\BasePopupWindowContent.cs" />
+    <Compile Include="Assets\Plugins\Fungus\Scripts\Editor\AssetModProcessor.cs" />
+    <Compile Include="Assets\Plugins\Fungus\Scripts\Editor\SetVariableEditor.cs" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Assets\Fungus\Scripts\Editor\GenerateVariableWindow.cs" />
-    <Compile Include="Assets\Fungus\Scripts\Editor\VariableTypes\CollectionVariableDrawer.cs" />
-    <Compile Include="Assets\Fungus\Scripts\Editor\VariableTypes\AnimatorVariableDrawer.cs" />
-    <Compile Include="Assets\Fungus\Scripts\Editor\CommandListAdaptor.cs" />
-    <Compile Include="Assets\Fungus\Scripts\Editor\EnumFlagDrawer.cs" />
-    <Compile Include="Assets\Fungus\Scripts\Editor\VariableTypes\SpriteVariableDrawer.cs" />
-    <Compile Include="Assets\Fungus\Scripts\Editor\SaveMenuEditor.cs" />
-    <Compile Include="Assets\Fungus\Scripts\Editor\FlowchartEditor.cs" />
-    <Compile Include="Assets\Fungus\Scripts\Editor\HierarchyIcons.cs" />
-    <Compile Include="Assets\Fungus\Scripts\Editor\NarrativeMenuItems.cs" />
-    <Compile Include="Assets\Fungus\Scripts\Editor\SaveMenuItems.cs" />
-    <Compile Include="Assets\Fungus\Scripts\Editor\CharacterEditor.cs" />
-    <Compile Include="Assets\Fungus\Scripts\Editor\EditorZoomArea.cs" />
-    <Compile Include="Assets\Fungus\Scripts\Editor\VariableTypes\Vector4VariableDrawer.cs" />
-    <Compile Include="Assets\Fungus\Scripts\Editor\VariableTypes\GameObjectVariableDrawer.cs" />
-    <Compile Include="Assets\Fungus\Scripts\Editor\CommandEditor.cs" />
-    <Compile Include="Assets\Fungus\Scripts\Editor\VariableTypes\AudioSourceVariableDrawer.cs" />
-    <Compile Include="Assets\Fungus\Scripts\Editor\VariableTypes\Matrix4x4VariableDrawer.cs" />
-    <Compile Include="Assets\Fungus\Scripts\Editor\ExportReferenceDocs.cs" />
-    <Compile Include="Assets\Fungus\Scripts\Editor\LabelEditor.cs" />
-    <Compile Include="Assets\Fungus\Scripts\Editor\PopupContent\EventSelectorPopupWindowContent.cs" />
-    <Compile Include="Assets\Fungus\Scripts\Editor\VariableTypes\QuaternionVariableDrawer.cs" />
-    <Compile Include="Assets\Fungus\Scripts\Editor\SerializedPropertyExtensions.cs" />
-    <Compile Include="Assets\Fungus\Scripts\Editor\LuaScriptedImporter.cs" />
-    <Compile Include="Assets\Fungus\Scripts\Editor\VariableTypes\ColliderVariableDrawer.cs" />
-    <Compile Include="Assets\Fungus\Scripts\Editor\VariableConditionEditor.cs" />
-    <Compile Include="Assets\Fungus\Scripts\Editor\EditorExtensions.cs" />
-    <Compile Include="Assets\Fungus\Scripts\Editor\VariableTypes\Vector3VariableDrawer.cs" />
-    <Compile Include="Assets\Fungus\Scripts\Editor\StageEditor.cs" />
-    <Compile Include="Assets\Fungus\Scripts\Editor\CustomGUI.cs" />
-    <Compile Include="Assets\Fungus\Scripts\Editor\FungusEditorResourcesGenerated.cs" />
-    <Compile Include="Assets\Fungus\Scripts\Editor\CustomVariableDrawerLookup.cs" />
-    <Compile Include="Assets\Fungus\Scripts\Editor\AnyVariableAndDataPairDrawer.cs" />
-    <Compile Include="Assets\Fungus\Scripts\Editor\BlockReferenceDrawer.cs" />
-    <Compile Include="Assets\Fungus\Scripts\Editor\BlockEditor.cs" />
-    <Compile Include="Assets\Fungus\Scripts\Editor\VariableTypes\TransformVariableDrawer.cs" />
-    <Compile Include="Assets\Fungus\Scripts\Editor\FungusEditorResources.cs" />
-    <Compile Include="Assets\Fungus\Scripts\Editor\WriterAudioEditor.cs" />
-    <Compile Include="Assets\Fungus\Scripts\Editor\CallEditor.cs" />
-    <Compile Include="Assets\Fungus\Scripts\Editor\FlowchartMenuItems.cs" />
-    <Compile Include="Assets\Fungus\Scripts\Editor\VariableTypes\ColorVariableDrawer.cs" />
-    <Compile Include="Assets\Fungus\Scripts\Editor\EventWindow.cs" />
-    <Compile Include="Assets\Fungus\Scripts\Editor\VariableTypes\Vector2VariableDrawer.cs" />
-    <Compile Include="Assets\Fungus\Scripts\Editor\VariableTypes\MaterialVariableDrawer.cs" />
-    <Compile Include="Assets\Fungus\Scripts\Editor\VariableTypes\RigidbodyVariableDrawer.cs" />
-    <Compile Include="Assets\Fungus\Scripts\Editor\VariableTypes\TextureVariableDrawer.cs" />
-    <Compile Include="Assets\Fungus\Scripts\Editor\MenuTimerEditor.cs" />
-    <Compile Include="Assets\Fungus\Scripts\Editor\LocalizationEditor.cs" />
-    <Compile Include="Assets\Fungus\Scripts\Editor\DialogInputEditor.cs" />
-    <Compile Include="Assets\Fungus\Scripts\Editor\ControlAudioEditor.cs" />
-    <Compile Include="Assets\Fungus\Scripts\Editor\PortraitEditor.cs" />
-    <Compile Include="Assets\Fungus\Scripts\Editor\FungusEditorPreferences.cs" />
-    <Compile Include="Assets\Fungus\Scripts\Editor\InvokeMethodEditor.cs" />
-    <Compile Include="Assets\Fungus\Scripts\Editor\WriteEditor.cs" />
-    <Compile Include="Assets\Fungus\Scripts\Editor\MenuEditor.cs" />
-    <Compile Include="Assets\Fungus\Scripts\Editor\SpriteMenuItems.cs" />
-    <Compile Include="Assets\Fungus\Scripts\Editor\VariableListAdaptor.cs" />
-    <Compile Include="Assets\Fungus\Scripts\Editor\VariableTypes\Collider2DVariableDrawer.cs" />
-    <Compile Include="Assets\Fungus\Scripts\Editor\GenerateVariableHelper.cs" />
-    <Compile Include="Assets\Fungus\Scripts\Editor\InvokeEventEditor.cs" />
-    <Compile Include="Assets\Fungus\Scripts\Editor\VariableTypes\Rigidbody2DVariableDrawer.cs" />
-    <Compile Include="Assets\Fungus\Scripts\Editor\EventHandlerEditor.cs" />
-    <Compile Include="Assets\Fungus\Scripts\Editor\VariableReferenceDrawer.cs" />
-    <Compile Include="Assets\Fungus\Scripts\Editor\PopupContent\CommandSelectorPopupWindowContent.cs" />
-    <Compile Include="Assets\Fungus\Scripts\Editor\FlowchartWindow.cs" />
-    <Compile Include="Assets\Fungus\Scripts\Editor\SolutionFileFixer.cs" />
-    <Compile Include="Assets\Fungus\Scripts\Editor\CameraMenuItems.cs" />
-    <Compile Include="Assets\Fungus\Scripts\Editor\SayEditor.cs" />
-    <Compile Include="Assets\Fungus\Scripts\Editor\VariableEditor.cs" />
-    <Compile Include="Assets\Fungus\Scripts\Editor\PopupContent\VariableSelectPopupWindowContent.cs" />
-    <Compile Include="Assets\Fungus\Scripts\Editor\ViewEditor.cs" />
-    <Compile Include="Assets\Fungus\Scripts\Editor\BlockInspector.cs" />
-    <Compile Include="Assets\Fungus\Scripts\Editor\BasePopupWindowContent.cs" />
-    <Compile Include="Assets\Fungus\Scripts\Editor\AssetModProcessor.cs" />
-    <Compile Include="Assets\Fungus\Scripts\Editor\SetVariableEditor.cs" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Assets\Fungus\Scripts\Editor\FungusEditor.asmdef" />
+    <None Include="Assets\Plugins\Fungus\Scripts\Editor\FungusEditor.asmdef" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="UnityEngine">
@@ -376,8 +373,14 @@
     <Reference Include="log4netPlastic">
       <HintPath>Library\PackageCache\com.unity.collab-proxy@1.9.0\Lib\Editor\PlasticSCM\log4netPlastic.dll</HintPath>
     </Reference>
+    <Reference Include="ICSharpCode.NRefactory">
+      <HintPath>Library\PackageCache\com.unity.render-pipelines.core@10.6.0\Editor\ShaderGenerator\ICSharpCode.NRefactory.dll</HintPath>
+    </Reference>
     <Reference Include="unityplastic">
       <HintPath>Library\PackageCache\com.unity.collab-proxy@1.9.0\Lib\Editor\PlasticSCM\unityplastic.dll</HintPath>
+    </Reference>
+    <Reference Include="Pathfinding.Ionic.Zip.Reduced">
+      <HintPath>Assets\Plugins\AstarPathfindingProject\Plugins\DotNetZip\Pathfinding.Ionic.Zip.Reduced.dll</HintPath>
     </Reference>
     <Reference Include="nunit.framework">
       <HintPath>Library\PackageCache\com.unity.ext.nunit@1.0.6\net35\unity-custom\nunit.framework.dll</HintPath>

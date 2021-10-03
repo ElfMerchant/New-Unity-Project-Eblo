@@ -1,7 +1,7 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <PropertyGroup>
-    <LangVersion>8.0</LangVersion>
+    <LangVersion>latest</LangVersion>
   </PropertyGroup>
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
@@ -53,30 +53,27 @@
     <UnityVersion>2020.3.18f1</UnityVersion>
   </PropertyGroup>
   <ItemGroup>
-    <Analyzer Include="C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\Common7\IDE\Extensions\Microsoft\Visual Studio Tools for Unity\Analyzers\Microsoft.Unity.Analyzers.dll" />
+    <Compile Include="Assets\Plugins\FungusExamples\FungusLua\Bindings\CustomScript.cs" />
+    <Compile Include="Assets\Plugins\FungusExamples\FirstPerson\Scripts\ForceCursorVisible.cs" />
+    <Compile Include="Assets\Plugins\FungusExamples\FirstPerson\Scripts\SimpleMouseLook.cs" />
+    <Compile Include="Assets\Plugins\FungusExamples\FirstPerson\Scripts\SimpleForceMovement.cs" />
+    <Compile Include="Assets\Plugins\FungusExamples\MonoBehEvents\SpriteColorChangeFromFungusMouseEvent.cs" />
+    <Compile Include="Assets\Plugins\FungusExamples\FirstPerson\Scripts\LookingAtDoor.cs" />
+    <Compile Include="Assets\Plugins\FungusExamples\FirstPerson\Scripts\FPDemoPriorityRouter.cs" />
+    <Compile Include="Assets\Plugins\FungusExamples\TextMeshPro\TMProLinkStylingDemo.cs" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Assets\FungusExamples\FungusLua\Bindings\CustomScript.cs" />
-    <Compile Include="Assets\FungusExamples\FirstPerson\Scripts\ForceCursorVisible.cs" />
-    <Compile Include="Assets\FungusExamples\FirstPerson\Scripts\SimpleMouseLook.cs" />
-    <Compile Include="Assets\FungusExamples\FirstPerson\Scripts\SimpleForceMovement.cs" />
-    <Compile Include="Assets\FungusExamples\MonoBehEvents\SpriteColorChangeFromFungusMouseEvent.cs" />
-    <Compile Include="Assets\FungusExamples\FirstPerson\Scripts\LookingAtDoor.cs" />
-    <Compile Include="Assets\FungusExamples\FirstPerson\Scripts\FPDemoPriorityRouter.cs" />
-    <Compile Include="Assets\FungusExamples\TextMeshPro\TMProLinkStylingDemo.cs" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Assets\FungusExamples\TheFacility\Fonts\aleo\SIL Open Font License.txt" />
-    <None Include="Assets\FungusExamples\FirstPerson\Visuals\Google Poly\Lock\CC-BY.txt" />
-    <None Include="Assets\FungusExamples\Attribution.txt" />
-    <None Include="Assets\FungusExamples\Sherlock\Readme.txt" />
-    <None Include="Assets\FungusExamples\FirstPerson\Visuals\Google Poly\Door\CC-BY.txt" />
-    <None Include="Assets\FungusExamples\FungusTown\Readme.txt" />
-    <None Include="Assets\FungusExamples\FirstPerson\Visuals\Google Poly\Button\CC-BY.txt" />
-    <None Include="Assets\FungusExamples\FungusExamples.asmdef" />
-    <None Include="Assets\FungusExamples\FirstPerson\Visuals\Google Poly\Key\CC-BY.txt" />
-    <None Include="Assets\FungusExamples\FungusLua\Localization\stringtable.txt" />
-    <None Include="Assets\FungusExamples\FungusLua\Narrative\Resources\Lua\junglestory.txt" />
+    <None Include="Assets\Plugins\FungusExamples\TheFacility\Fonts\aleo\SIL Open Font License.txt" />
+    <None Include="Assets\Plugins\FungusExamples\FirstPerson\Visuals\Google Poly\Lock\CC-BY.txt" />
+    <None Include="Assets\Plugins\FungusExamples\Attribution.txt" />
+    <None Include="Assets\Plugins\FungusExamples\Sherlock\Readme.txt" />
+    <None Include="Assets\Plugins\FungusExamples\FirstPerson\Visuals\Google Poly\Door\CC-BY.txt" />
+    <None Include="Assets\Plugins\FungusExamples\FungusTown\Readme.txt" />
+    <None Include="Assets\Plugins\FungusExamples\FirstPerson\Visuals\Google Poly\Button\CC-BY.txt" />
+    <None Include="Assets\Plugins\FungusExamples\FungusExamples.asmdef" />
+    <None Include="Assets\Plugins\FungusExamples\FirstPerson\Visuals\Google Poly\Key\CC-BY.txt" />
+    <None Include="Assets\Plugins\FungusExamples\FungusLua\Localization\stringtable.txt" />
+    <None Include="Assets\Plugins\FungusExamples\FungusLua\Narrative\Resources\Lua\junglestory.txt" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="UnityEngine">
@@ -319,8 +316,14 @@
     <Reference Include="log4netPlastic">
       <HintPath>Library\PackageCache\com.unity.collab-proxy@1.9.0\Lib\Editor\PlasticSCM\log4netPlastic.dll</HintPath>
     </Reference>
+    <Reference Include="ICSharpCode.NRefactory">
+      <HintPath>Library\PackageCache\com.unity.render-pipelines.core@10.6.0\Editor\ShaderGenerator\ICSharpCode.NRefactory.dll</HintPath>
+    </Reference>
     <Reference Include="unityplastic">
       <HintPath>Library\PackageCache\com.unity.collab-proxy@1.9.0\Lib\Editor\PlasticSCM\unityplastic.dll</HintPath>
+    </Reference>
+    <Reference Include="Pathfinding.Ionic.Zip.Reduced">
+      <HintPath>Assets\Plugins\AstarPathfindingProject\Plugins\DotNetZip\Pathfinding.Ionic.Zip.Reduced.dll</HintPath>
     </Reference>
     <Reference Include="netstandard">
       <HintPath>C:\Program Files\2020.3.18f1\Editor\Data\NetStandard\ref\2.0.0\netstandard.dll</HintPath>

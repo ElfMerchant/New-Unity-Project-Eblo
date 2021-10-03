@@ -3,19 +3,22 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class Slime : Entity
-{ 
-    [SerializeField] 
+{
+    private Animator anim;
+    private Collider2D col;
 
 
     private void Start()
     {
         lives = 3;
+        anim = GetComponent<Animator>();
+        col = GetComponent<Collider2D>();
     }
 
 
     private void OnCollisionEnter2D(Collision2D collision)
     {
-        if (collision.gameObject == Eblo.Instance.gameObject)
+        if (lives > 0 && collision.gameObject == Eblo.Instance.gameObject)
         {
             Eblo.Instance.GetDamage();
             lives--;
@@ -24,8 +27,16 @@ public class Slime : Entity
         }
 
     if (lives < 1)
-        Die();
+
+            Die();     
     }
+
+    public override void Die()
+    {
+        col.isTrigger = true;
+        anim.SetTrigger("death");
+    }
+
 
     // Update is called once per frame
     void Update()
