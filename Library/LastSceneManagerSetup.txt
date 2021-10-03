@@ -1,13 +1,5 @@
 sceneSetups:
-- path: Assets/Scenes/sd.unity
-  isLoaded: 0
-  isActive: 0
-  isSubScene: 0
 - path: Assets/Scenes/sd boss.unity
-  isLoaded: 0
-  isActive: 0
-  isSubScene: 0
-- path: Assets/Scenes/MushroomAttackTest.unity
   isLoaded: 0
   isActive: 0
   isSubScene: 0
