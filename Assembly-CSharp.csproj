@@ -53,9 +53,13 @@
     <UnityVersion>2020.3.18f1</UnityVersion>
   </PropertyGroup>
   <ItemGroup>
+    <Compile Include="Assets\Scripts\SceneMenager.cs" />
     <Compile Include="Assets\Scripts\LosePlatform.cs" />
+    <Compile Include="Assets\Scripts\FuckGoBack.cs" />
     <Compile Include="Assets\Scripts\MushroomBoss.cs" />
+    <Compile Include="Assets\Scripts\LightController.cs" />
     <Compile Include="Assets\Scripts\Slime.cs" />
+    <Compile Include="Assets\Scripts\PlatformLightDanger.cs" />
     <Compile Include="Assets\Scripts\Entity.cs" />
     <Compile Include="Assets\Scripts\Danger.cs" />
     <Compile Include="Assets\Scripts\FlyingMonster.cs" />
@@ -68,7 +72,7 @@
     <Compile Include="Assets\Scripts\Eblo.cs" />
     <Compile Include="Assets\Scripts\Loader.cs" />
     <Compile Include="Assets\Scripts\Pause.cs" />
-    <Compile Include="Assets\Scripts\PlatformLightDanger.cs" />
+    <Compile Include="Assets\Scripts\Triggers\Level1_Trigger.cs" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="UnityEngine">

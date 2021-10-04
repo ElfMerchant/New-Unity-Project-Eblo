@@ -6,6 +6,7 @@ using UnityEngine.UI;
 public class Pause : MonoBehaviour
 {
     [SerializeField] GameObject pausePanel;
+    public static Pause Instance { get; set; }
 
     private void Awake()
     {

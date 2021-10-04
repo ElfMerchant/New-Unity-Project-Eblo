@@ -9,8 +9,9 @@ public class Eblo : Entity
 {
     [SerializeField] private float speed = 10f; // скорость передвижения
     [SerializeField] private float jumpforce = 15f; // сила прыжка
-    [SerializeField] private int health = 5; // текущее здоровье
+    [SerializeField] public int health = 5; // текущее здоровье
     public bool isGrounded = false; // тест на нахождение на земле, чтобы избежать возможности бесконечного прыжка ( !ЗАМЕНИТЬ НА ТЕСТ НА ВЕРТИКАЛЬНОЕ УСКОРЕНИЕ!)
+    public States currentState;
 
     [SerializeField] private Image[] hearts;
     [SerializeField] private Sprite aliveHeart;
@@ -55,7 +56,8 @@ public class Eblo : Entity
         sprite = GetComponentInChildren<SpriteRenderer>();
         isRecharged = true;
         losePanel.SetActive(false); //Сам написал, чел в гайде просто не указал эту строчку
-
+        State = States.idle;
+        Time.timeScale = 1;
     }   
 
     private void Run()
@@ -177,8 +179,9 @@ public class Eblo : Entity
     // Update is called once per frame
     private void Update()
     {
-
-            if (isGrounded && !isAttacking && health > 0) State = States.idle; 
+        if (State != States.read)
+        {
+            if (isGrounded && !isAttacking && health > 0) State = States.idle;
 
             if (!isAttacking && Input.GetButton("Horizontal"))
                 Run();
@@ -186,27 +189,25 @@ public class Eblo : Entity
                 Jump();
             if (Input.GetButtonDown("Fire1"))
                 Attack();
-            if (health < 1) State = States.death; // Написал сам, чтобы при смерти проигрывалась анимация смерти
-        
+//            if (health < 1) State = States.death; // Написал сам, чтобы при смерти проигрывалась анимация смерти
 
+            if (health > lives)
+                health = lives;
 
+            for (int i = 0; i < hearts.Length; i++)
+            {
+                if (i < health)
+                    hearts[i].sprite = aliveHeart;
+                else
+                    hearts[i].sprite = deadHeart; //deadHeart не отображается
 
-        if (health > lives)
-            health = lives;
-
-        for (int i = 0; i < hearts.Length; i++)
-        {
-            if (i < health)
-                hearts[i].sprite = aliveHeart;
-            else
-                hearts[i].sprite = deadHeart; //deadHeart не отображается
-
-            if (i < lives)
-                hearts[i].enabled = true;
-            else
-                hearts[i].enabled = false;
+                if (i < lives)
+                    hearts[i].enabled = true;
+                else
+                    hearts[i].enabled = false;
+            }
         }
-   
+        currentState = State;
     }
 
     private void FixedUpdate()
@@ -214,6 +215,14 @@ public class Eblo : Entity
         CheckGround();
     }
 
+    public void Reading()
+    {
+        State = States.read;
+    }
+    public void NotReading()
+    {
+        State = States.idle;
+    }
 } 
 
 public enum States
@@ -222,5 +231,6 @@ public enum States
     run,
     jump,
     attack,
-    death
+    death,
+    read
 }

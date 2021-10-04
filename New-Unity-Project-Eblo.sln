@@ -3,9 +3,9 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 15
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Fungus", "Fungus.csproj", "{70ACB42F-DBB5-BD43-3E8A-D3A11003814A}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AstarPathfindingProject", "AstarPathfindingProject.csproj", "{9C0C6F0D-5FFA-B6AA-9887-225FE8F19A6D}"
-EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Assembly-CSharp", "Assembly-CSharp.csproj", "{3B28D9F3-D1CA-C6F0-1349-8641FCB0CD6A}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AstarPathfindingProject", "AstarPathfindingProject.csproj", "{9C0C6F0D-5FFA-B6AA-9887-225FE8F19A6D}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FungusExamples", "FungusExamples.csproj", "{353F4EAF-B639-7501-C46C-6EECD5CBF87F}"
 EndProject
@@ -37,14 +37,14 @@ Global
 		{70ACB42F-DBB5-BD43-3E8A-D3A11003814A}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{70ACB42F-DBB5-BD43-3E8A-D3A11003814A}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{70ACB42F-DBB5-BD43-3E8A-D3A11003814A}.Release|Any CPU.Build.0 = Release|Any CPU
-		{9C0C6F0D-5FFA-B6AA-9887-225FE8F19A6D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{9C0C6F0D-5FFA-B6AA-9887-225FE8F19A6D}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{9C0C6F0D-5FFA-B6AA-9887-225FE8F19A6D}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{9C0C6F0D-5FFA-B6AA-9887-225FE8F19A6D}.Release|Any CPU.Build.0 = Release|Any CPU
 		{3B28D9F3-D1CA-C6F0-1349-8641FCB0CD6A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{3B28D9F3-D1CA-C6F0-1349-8641FCB0CD6A}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{3B28D9F3-D1CA-C6F0-1349-8641FCB0CD6A}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{3B28D9F3-D1CA-C6F0-1349-8641FCB0CD6A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{9C0C6F0D-5FFA-B6AA-9887-225FE8F19A6D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9C0C6F0D-5FFA-B6AA-9887-225FE8F19A6D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9C0C6F0D-5FFA-B6AA-9887-225FE8F19A6D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9C0C6F0D-5FFA-B6AA-9887-225FE8F19A6D}.Release|Any CPU.Build.0 = Release|Any CPU
 		{353F4EAF-B639-7501-C46C-6EECD5CBF87F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{353F4EAF-B639-7501-C46C-6EECD5CBF87F}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{353F4EAF-B639-7501-C46C-6EECD5CBF87F}.Release|Any CPU.ActiveCfg = Release|Any CPU
