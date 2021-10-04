@@ -59,6 +59,8 @@ ScriptsOnlyBuild:
     - UnityEditor.U2D.IK.IKEditorManagerHelper
     Unity.2D.Tilemap.Editor.dll:
     - UnityEditor.Tilemaps.GridPaintingState
+    - UnityEditor.Tilemaps.GridPaletteBrushes
+    - UnityEditor.Tilemaps.GridPalettes
     - UnityEditor.Tilemaps.SceneViewGridManager
     - UnityEditor.Tilemaps.SceneViewOpenTilePaletteHelper
     - UnityEditor.Tilemaps.TileDragAndDropManager
@@ -134,7 +136,7 @@ ScriptsOnlyBuild:
     - UnityEngine.UI.Toggle
     - UnityEngine.UI.VerticalLayoutGroup
   sceneClasses:
-    Assets/Scenes/Level1_Cave.unity:
+    Assets/Scenes/Level2Temple.unity:
     - Class: 1
       Script: {instanceID: 0}
     - Class: 4
@@ -3498,5 +3500,5 @@ ScriptsOnlyBuild:
     className: ObjectClicked
   platform: 19
   scenePathNames:
-  - Assets/Scenes/Level1_Cave.unity
+  - Assets/Scenes/Level2Temple.unity
   playerPath: "C:/Users/\u0420\u0443/Desktop/Test/New Unity Project.exe"
