@@ -10,6 +10,7 @@ ScriptsOnlyBuild:
     - MushroomBoss
     - Parallax
     - Pause
+    - PlatformDanger
     - Slime
     AstarPathfindingProject.dll:
     - AstarPath
@@ -276,6 +277,8 @@ ScriptsOnlyBuild:
       Script: {instanceID: 5090}
     - Class: 114
       Script: {instanceID: 5096}
+    - Class: 114
+      Script: {instanceID: 5274}
     - Class: 114
       Script: {instanceID: 5422}
     - Class: 114

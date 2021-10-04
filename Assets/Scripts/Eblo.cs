@@ -55,7 +55,7 @@ public class Eblo : Entity
         sprite = GetComponentInChildren<SpriteRenderer>();
         isRecharged = true;
         losePanel.SetActive(false); //Сам написал, чел в гайде просто не указал эту строчку
-        State = States.idle;
+
     }   
 
     private void Run()
@@ -177,9 +177,8 @@ public class Eblo : Entity
     // Update is called once per frame
     private void Update()
     {
-        if (State != States.read)
-        {
-            if (isGrounded && !isAttacking && health > 0) State = States.idle;
+
+            if (isGrounded && !isAttacking && health > 0) State = States.idle; 
 
             if (!isAttacking && Input.GetButton("Horizontal"))
                 Run();
@@ -188,23 +187,26 @@ public class Eblo : Entity
             if (Input.GetButtonDown("Fire1"))
                 Attack();
             if (health < 1) State = States.death; // Написал сам, чтобы при смерти проигрывалась анимация смерти
+        
 
-            if (health > lives)
-                health = lives;
 
-            for (int i = 0; i < hearts.Length; i++)
-            {
-                if (i < health)
-                    hearts[i].sprite = aliveHeart;
-                else
-                    hearts[i].sprite = deadHeart; //deadHeart не отображается
 
-                if (i < lives)
-                    hearts[i].enabled = true;
-                else
-                    hearts[i].enabled = false;
-            }
+        if (health > lives)
+            health = lives;
+
+        for (int i = 0; i < hearts.Length; i++)
+        {
+            if (i < health)
+                hearts[i].sprite = aliveHeart;
+            else
+                hearts[i].sprite = deadHeart; //deadHeart не отображается
+
+            if (i < lives)
+                hearts[i].enabled = true;
+            else
+                hearts[i].enabled = false;
         }
+   
     }
 
     private void FixedUpdate()
@@ -212,14 +214,6 @@ public class Eblo : Entity
         CheckGround();
     }
 
-    public void Reading()
-    {
-        State = States.read;
-    }
-    public void NotReading()
-    {
-        State = States.idle;
-    }
 } 
 
 public enum States
@@ -228,6 +222,5 @@ public enum States
     run,
     jump,
     attack,
-    death,
-    read
+    death
 }
