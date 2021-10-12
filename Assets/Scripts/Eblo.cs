@@ -187,7 +187,7 @@ public class Eblo : Entity
                 Run();
             if (!isAttacking && isGrounded && health > 0 && Input.GetButtonDown("Jump"))
                 Jump();
-            if (Input.GetButtonDown("Fire1"))
+            if (Input.GetButtonDown("Fire2"))
                 Attack();
 //            if (health < 1) State = States.death; // Написал сам, чтобы при смерти проигрывалась анимация смерти
 

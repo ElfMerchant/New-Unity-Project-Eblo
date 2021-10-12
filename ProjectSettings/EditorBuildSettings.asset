@@ -17,10 +17,34 @@ EditorBuildSettings:
   - enabled: 0
     path: Assets/Scenes/MushroomAttackTest.unity
     guid: ce90cfba3a82cf14cbb0e9ab86bed7e0
-  - enabled: 0
+  - enabled: 1
+    path: Assets/Scenes/MainMenu.unity
+    guid: ac214f69bcd241f48ab255bd7ba20876
+  - enabled: 1
+    path: Assets/Scenes/Creators.unity
+    guid: 2a1cbaff1e788d043998c329a34e782b
+  - enabled: 1
+    path: Assets/Scenes/Settings.unity
+    guid: ef10bd8e75869c742b023f94d1d5842b
+  - enabled: 1
     path: Assets/Scenes/Level1_Cave.unity
     guid: fb7ca47de4effb347bd8daf39711c1e7
   - enabled: 1
     path: Assets/Scenes/Level2Temple.unity
     guid: 108ac933074e9cd4999cafdc083ea771
+  - enabled: 1
+    path: Assets/Scenes/Level3Boss.unity
+    guid: f22640554ba3bb54eadf347670d683b6
+  - enabled: 1
+    path: Assets/Scenes/N0.unity
+    guid: 38873873373b0634bb9cf1f2e5a736a4
+  - enabled: 1
+    path: Assets/Scenes/N2-1.unity
+    guid: cabe815bff14996499a1674a90d8a500
+  - enabled: 1
+    path: Assets/Scenes/N2-2.unity
+    guid: 198b2bf6d7ed4144ba0c57bfa215e398
+  - enabled: 1
+    path: Assets/Scenes/N3-2.unity
+    guid: 8657943e71db7aa4ba24dfaa1ef3641b
   m_configObjects: {}

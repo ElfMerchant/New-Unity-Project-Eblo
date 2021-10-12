@@ -27,7 +27,7 @@ public class MushroomBoss : Entity
 
     private void Start()
     {
-        lives = 8;
+        lives = 10;
         movingRight = true;
         isAttackingBoss = false;
         isRechargedBoss = true;
@@ -88,21 +88,21 @@ public class MushroomBoss : Entity
         RaycastHit2D groundInfo = Physics2D.Raycast(groundDetection.position, Vector2.down, distanceBoss);
         Debug.Log(groundInfo.collider);
 
-        if (groundInfo.collider == false)
-        {
-            if (movingRight == true)
-            {
-                transform.eulerAngles = new Vector3(0, -180, 0);
-                movingRight = false;
-            }
-            else
-            {
-                {
-                    transform.eulerAngles = new Vector3(0, 0, 0);
-                    movingRight = true;
-                }
-            }
-        }
+        //if (groundInfo.collider == false)
+        //{
+        //    if (movingRight == true)
+        //    {
+        //        transform.eulerAngles = new Vector3(0, -180, 0);
+        //        movingRight = false;
+        //    }
+        //    else
+        //    {
+        //        {
+        //            transform.eulerAngles = new Vector3(0, 0, 0);
+        //            movingRight = true;
+        //        }
+        //    }
+        //}
 
         if (movingRight)
             groundInfo = Physics2D.Raycast(groundDetection.position, Vector2.right, distanceBoss);
@@ -154,6 +154,22 @@ public class MushroomBoss : Entity
         yield return new WaitForSeconds(1f);
         isRechargedBoss = true;
     }
+
+    private void OnCollisionEnter2D(UnityEngine.Collision2D collision)
+    {
+        if (lives > 0 && collision.gameObject == Eblo.Instance.gameObject)
+        {
+            Eblo.Instance.GetDamage();
+            lives--;
+            Debug.Log("Slime lives counter:" + lives);
+
+        }
+
+        if (lives < 1)
+
+            Die();
+    }
+
 
 }
 

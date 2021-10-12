@@ -3,6 +3,8 @@ using UnityEngine;
 
 public class SceneMenager : MonoBehaviour
 {
+    [SerializeField] string targetScene;
+
     public void LoadScene(string sceneName)
     {
         SceneManager.LoadScene(sceneName);
@@ -20,4 +22,18 @@ public class SceneMenager : MonoBehaviour
             LoadScene("Main Menu");
         }
     }
+    public void Exit()
+    {
+        Application.Quit();
+    }
+
+
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        LoadScene(targetScene);
+    }
+
+
+
+
 }

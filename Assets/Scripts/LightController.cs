@@ -27,11 +27,15 @@ public class LightController : MonoBehaviour
 
     void OnTriggerEnter2D(Collider2D collision)
     {
-        if (usingPlayer)
-            lightObj.GetComponent<Light2D>().intensity = enterItensity;
+        if (collision.gameObject.name.Equals("Eblo"))
+        {
 
-        if (usingGlobal)
-            lightObjGlobal.GetComponent<Light2D>().intensity = enterItensity;
+            if (usingPlayer)
+                lightObj.GetComponent<Light2D>().intensity = enterItensity;
+
+            if (usingGlobal)
+                lightObjGlobal.GetComponent<Light2D>().intensity = enterItensity;
+        }
     }
 
     private void OnTriggerExit2D(Collider2D collision)
